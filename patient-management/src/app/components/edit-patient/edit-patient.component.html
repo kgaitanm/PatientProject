@@ -1,0 +1,56 @@
+<mat-card *ngIf="patient$ | async as patient" class="edit-patient-card">
+    <mat-card-title>Edit Patient</mat-card-title>
+    <mat-card-subtitle>Modify the patient's information below and save changes.</mat-card-subtitle>
+  
+    <mat-card-content>
+      <form (ngSubmit)="savePatient(patient)" class="edit-form">
+       
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>First Name</mat-label>
+          <input matInput [(ngModel)]="patient.firstName" name="firstName" required />
+        </mat-form-field>
+  
+      
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Last Name</mat-label>
+          <input matInput [(ngModel)]="patient.lastName" name="lastName" required />
+        </mat-form-field>
+  
+      
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Date of Birth</mat-label>
+          <input matInput [(ngModel)]="patient.dateOfBirth"  [ngModel]="patient.dateOfBirth | date:'yyyy-MM-dd'" name="dateOfBirth" type="date" required />
+        </mat-form-field>
+  
+        
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Address</mat-label>
+          <input matInput [(ngModel)]="patient.address" name="address" required />
+        </mat-form-field>
+  
+       
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="patient.email" name="email" type="email" required />
+        </mat-form-field>
+  
+      
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Phone Number</mat-label>
+          <input matInput [(ngModel)]="patient.phoneNumber" name="phoneNumber" required />
+        </mat-form-field>
+  
+       
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Social Insurance Number</mat-label>
+          <input matInput [(ngModel)]="patient.socialInsuranceNumber" name="socialInsuranceNumber" required />
+        </mat-form-field>
+  
+       
+        <div class="button-container">
+          <button mat-raised-button color="primary" type="submit" class="save-button">Save</button>
+          <button mat-raised-button color="warn" type="button" (click)="goBack()">Back</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>

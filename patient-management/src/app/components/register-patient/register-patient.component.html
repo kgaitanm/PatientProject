@@ -1,0 +1,65 @@
+<mat-card class="register-card">
+    <mat-card-title>Register Patient</mat-card-title>
+    <mat-card-subtitle>Please fill in the form below to register a new patient.</mat-card-subtitle>
+  
+    <mat-card-content id="register-content">
+       
+      
+
+      <form (ngSubmit)="registerPatient()">
+       
+        <div class="form-group">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>First Name</mat-label>
+           
+            <input matInput [(ngModel)]="patient.firstName" name="firstName" required />
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Last Name</mat-label>
+          
+            <input matInput [(ngModel)]="patient.lastName" name="lastName" required />
+          </mat-form-field>
+        </div>
+  
+       
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+      
+          <input matInput [(ngModel)]="patient.email" name="email" type="email" required />
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Phone Number</mat-label>
+         
+          <input matInput [(ngModel)]="patient.phoneNumber" name="phoneNumber" required />
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Date of Birth</mat-label>
+        
+          <input matInput [(ngModel)]="patient.dateOfBirth" name="dateOfBirth" type="date" required />
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Address</mat-label>
+         
+          <input matInput [(ngModel)]="patient.address" name="address" required />
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Social Insurance Number</mat-label>
+        
+          <input matInput [(ngModel)]="patient.socialInsuranceNumber" name="socialInsuranceNumber" required />
+        </mat-form-field>
+  
+      
+        <div class="button-container">
+          <button mat-raised-button color="primary" type="submit" class="register-button">Register</button>
+          <button mat-raised-button color="warn"  type="button" (click)="goBack()"  class="back-button">Back</button>
+        </div>
+
+      
+      </form>
+    </mat-card-content>
+  </mat-card>

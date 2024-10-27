@@ -1,0 +1,33 @@
+
+<mat-card *ngIf="patient$ | async as patient" class="patient-detail-card">
+    <mat-card-title>Patient Details</mat-card-title>
+    <mat-card-subtitle>Review the patient's information below.</mat-card-subtitle>
+  
+    <mat-card-content >
+      <div class="detail-field">
+        <strong>First Name:</strong> {{ patient.firstName }}
+      </div>
+      <div class="detail-field">
+        <strong>Last Name:</strong> {{ patient.lastName }}
+      </div>
+      <div class="detail-field">
+        <strong>Date of Birth:</strong> {{ patient.dateOfBirth | date }}
+      </div>
+      <div class="detail-field">
+        <strong>Address:</strong> {{ patient.address }}
+      </div>
+      <div class="detail-field">
+        <strong>Email:</strong> {{ patient.email}}
+      </div>
+      <div class="detail-field">
+        <strong>Phone Number:</strong> {{ patient.phoneNumber }}
+      </div>
+      <div class="detail-field">
+        <strong>Social Insurance Number:</strong> {{ patient.socialInsuranceNumber }}
+      </div>
+    </mat-card-content>
+  
+    <div class="button-container">
+      <button mat-raised-button  color="warn"  type="button" (click)="goBack()">Back</button>
+    </div>
+  </mat-card>

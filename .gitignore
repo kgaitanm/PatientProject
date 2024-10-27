@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/patient-management/node_modules
+/PatientProject.Api/bin/Debug/net8.0
+/PatientProject.Api/obj
+/PatientProject.Application/bin/Debug/net8.0
+/PatientProject.Application/obj
+/PatientProject.Domain/bin/Debug/net8.0
+/PatientProject.Domain/obj
+/PatientProject.Infrastructure/bin/Debug/net8.0
+/PatientProject.Infrastructure/obj
+/PatientProject.Tests/bin/Debug/net8.0
+/PatientProject.Tests/obj
