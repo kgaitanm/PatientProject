@@ -11,12 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientProject.Api", "Patie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientProject.Infrastructure", "PatientProject.Infrastructure\PatientProject.Infrastructure.csproj", "{27652464-0D74-4213-9EF9-FD30D5B26D09}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{F8A8FE5E-04B9-4C7C-B286-A7765910336A}"
-	ProjectSection(SolutionItems) = preProject
-		PatientProject.Domain\SqlQueries\dbo.PatientTable.sql = PatientProject.Domain\SqlQueries\dbo.PatientTable.sql
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientProject.Tests", "PatientProject.Tests\PatientProject.Tests.csproj", "{4CD3B786-63EB-4850-A9A5-38701C0D1C3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AE9C21E9-A8ED-4FFA-B179-FE3D4933797E}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Create dbo.Patient.sql = SQL\Create dbo.Patient.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
